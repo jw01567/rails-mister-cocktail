@@ -1,8 +1,14 @@
-<h2> Create a cocktail! </h2>
+<nav class="navbar navbar-dark bg-dark" style="color: white;">
+  <h1>Mister Cocktail:</h1>
+</nav>
 
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+ <h2> Create a cocktail! </h2>
 
-<p><%= link_to 'back to cocktails', cocktails_path %></p>
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.submit %>
+  <% end %>
+
+  <p><%= link_to 'back to cocktails', cocktails_path %></p>
+</div>

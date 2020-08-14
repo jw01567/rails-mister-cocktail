@@ -1,3 +1,36 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.title {
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.container {
+  margin: 0px auto;
+}
+
+.show {
+  float: right;
+}
+
+.cards {
+  display: grid;
+  padding: 10px
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}

@@ -1,10 +1,38 @@
-<h1> Cocktails:</h1>
+<div class="name">
+<nav class="navbar navbar-dark bg-dark" style="color: white;">
+  <h1>Mister Cocktail:</h1>
+</nav>
+</div>
 
-<ul>
+
+<div class="container">
+  <div class="title">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1513470939372-bd520e7d77db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2689&q=80')">
+      Cocktails:
+  </div>
+ <div class="cards mt-5" style="">
   <% @cocktails.each do |cocktail| %>
-    <li><%= cocktail.name %></li>
-    <td><%= link_to 'Show', cocktail %></td>
+    <div class="card m-2" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"><%= cocktail.name %></h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <div class="show">
+          <td><%= link_to cocktail, method: :get do %></td>
+          <i class="fas fa-arrow-circle-right" style="font-size: 30px;"></i>
+          <% end  %>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+  <div class="add">
+    <p><%= link_to new_cocktail_path, method: :get do %></p>
+    <i class="fas fa-plus-circle" style="font-size: 50px;"></i>
+    <% end %>
+  </div>
+</div>
 
-<p><% link_to 'Add a cocktail', new_cocktail_path %></p>
+</div>
+
+
+
+

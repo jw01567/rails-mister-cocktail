@@ -9,6 +9,7 @@ require 'json'
 require 'open-uri'
 
 puts 'destroy ingredients'
+Dose.destroy_all
 Ingredient.destroy_all
 
 puts 'destroy cocktails'
@@ -23,3 +24,8 @@ ingredients['drinks'].each do |ingredient|
   i = Ingredient.create(name: ingredient['strIngredient1'])
   puts "create #{i.name}"
 end
+
+mojojojo = Cocktail.create!(
+  name: 'mojojojo',
+  image_url: 'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=2734&q=80'
+)

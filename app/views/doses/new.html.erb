@@ -1,7 +1,19 @@
-<h2>Add doses</h2>
+<nav class="navbar navbar-dark bg-dark" style="color: white;">
+  <h1>Mister Cocktail:</h1>
+</nav>
 
-<%= simple_form_for [ @cocktail, @dose ] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.submit "Submit doses", class: "btn btn-primary" %>
-<% end %>
+
+
+<div class="container">
+
+  <h2>Add doses</h2>
+  <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit "Submit doses", class: "btn btn-primary" %>
+  <% end %>
+
+  <p><%= link_to 'Back to cocktails', cocktails_path  %></p>
+</div>
+
+
