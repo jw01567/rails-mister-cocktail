@@ -1,17 +1,19 @@
 <nav class="navbar navbar-dark bg-dark" style="color: white;">
   <h1>Mister Cocktail:</h1>
+  <i class="fas fa-glass-cheers" style="font-size: 40px"></i>
 </nav>
 
 
 
 <div class="container">
-
+  <div class="form mt-5">
   <h2>Add doses</h2>
   <%= simple_form_for [ @cocktail, @dose ] do |f| %>
     <%= f.input :description %>
     <%= f.association :ingredient %>
     <%= f.submit "Submit doses", class: "btn btn-primary" %>
   <% end %>
+ </div>
 
   <p><%= link_to 'Back to cocktails', cocktails_path  %></p>
 </div>

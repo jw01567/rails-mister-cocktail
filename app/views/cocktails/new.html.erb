@@ -1,5 +1,6 @@
 <nav class="navbar navbar-dark bg-dark" style="color: white;">
   <h1>Mister Cocktail:</h1>
+  <i class="fas fa-glass-cheers" style="font-size: 40px"></i>
 </nav>
 
 <div class="container">
@@ -7,6 +8,7 @@
 
   <%= simple_form_for(@cocktail) do |f| %>
     <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit %>
   <% end %>
 
